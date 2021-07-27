@@ -1,5 +1,6 @@
 package org.example;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 public abstract class Customer {
@@ -22,4 +23,6 @@ public abstract class Customer {
         lastBillDate = date;
         lastBillAmount = amount;
     }
+
+    protected abstract double ChargeFor(LocalDateTime start, LocalDateTime end);
 }
