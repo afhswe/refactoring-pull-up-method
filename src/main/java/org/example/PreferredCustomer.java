@@ -8,7 +8,7 @@ public class PreferredCustomer extends Customer {
         addBill(date, ChargeFor(lastBillDate(), date));
     }
 
-    private double ChargeFor(LocalDateTime start, LocalDateTime end) {
+    protected double ChargeFor(LocalDateTime start, LocalDateTime end) {
         return (Duration.between(start, end)).toDays() * 80.0;
     }
 }
