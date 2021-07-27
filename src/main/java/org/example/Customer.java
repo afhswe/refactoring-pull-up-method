@@ -25,4 +25,8 @@ public abstract class Customer {
     }
 
     protected abstract double ChargeFor(LocalDateTime start, LocalDateTime end);
+
+    public void createBill(LocalDateTime date) {
+        addBill(date, ChargeFor(lastBillDate(), date));
+    }
 }
